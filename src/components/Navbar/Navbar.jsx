@@ -25,7 +25,7 @@ const Navbar = ({totalItems}) => {
                             </Typography>
                         </Grid>
                         <Grid item sm={4}>
-                            <Typography component={Link} to='/' variant="body2" className={classes.navlink} color="inherit">
+                            <Typography component={Link} to='/shop' variant="body2" className={classes.navlink} color="inherit">
                                 Shop
                             </Typography>
                         </Grid>
