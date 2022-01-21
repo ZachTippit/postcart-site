@@ -81,19 +81,16 @@ const App = () => {
 
     return (
         <Router>
-            <div>
-                <Navbar totalItems={cart.total_items}/>
-                <Routes>
-                    <Route path="/" element={<Layout />} >
-                        <Route index element={<Home />} />
-                        <Route path='shop' element={<Products products={products} onAddToCart={handleAddToCart} filterProducts={filterProducts}/>} />
-                        <Route path='cart' element={<Cart cart={cart} handleUpdateCartQty={handleUpdateCartQty} handleRemoveFromCart={handleRemoveFromCart} handleEmptyCart={handleEmptyCart} />} />
-                        <Route path="checkout" element={<Checkout cart={cart} order={order} onCaptureCheckout={handleCaptureCheckout} error={errorMessage} />} />
-                        <Route path='about' element={<About />} />
-                        <Route path='contact' element={<Contact />} />
-                    </Route>
-                </Routes>
-            </div>
+            <Routes>
+                <Route path="/" element={<Layout />} >
+                    <Route index element={<Home />} />
+                    <Route path='shop' element={<Products products={products} onAddToCart={handleAddToCart} filterProducts={filterProducts}/>} />
+                    <Route path='cart' element={<Cart cart={cart} handleUpdateCartQty={handleUpdateCartQty} handleRemoveFromCart={handleRemoveFromCart} handleEmptyCart={handleEmptyCart} />} />
+                    <Route path="checkout" element={<Checkout cart={cart} order={order} onCaptureCheckout={handleCaptureCheckout} error={errorMessage} />} />
+                    <Route path='about' element={<About />} />
+                    <Route path='contact' element={<Contact />} />
+                </Route>
+            </Routes>
         </Router>
     )
 }

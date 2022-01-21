@@ -4,6 +4,8 @@ const drawerWidth = 0;
 
 export default makeStyles((theme) => ({
   appBar: {
+    height: '4rem',
+    lineHeight: '4rem',
     boxShadow: 'none',
     borderBottom: '1px solid rgba(0, 0, 0, 0.12)',
     [theme.breakpoints.up('sm')]: {
@@ -69,7 +71,8 @@ export default makeStyles((theme) => ({
     textDecoration: 'none'
   },
   navItems: {
-    paddingLeft: '5%',
+    padding: 0,
+    color: 'inherit',
     justifyContent: 'center',
     width: '600px',
     margin: 'auto'
