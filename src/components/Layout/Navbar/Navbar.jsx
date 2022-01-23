@@ -4,7 +4,6 @@ import { Menu, Container, Avatar, Button, Tooltip, MenuItem } from '@material-ui
 import MenuIcon from '@material-ui/icons/Menu'
 import { ShoppingCart } from '@material-ui/icons';
 import { Link, useLocation } from 'react-router-dom';
-import logo from '../../assets/commerce.png';
 import useStyles from './styles';
 
 const pages = [
@@ -85,7 +84,7 @@ const Navbar = ({totalItems}) => {
                                     key={page.title}
                                     component={Link} to={page.link}
                                     onClick={handleCloseNavMenu}
-                                    sx={{ my: 2, color: 'white', display: 'block' }}
+                                    style={{color: 'white'}}
                                 >
                                     {page.title}
                                 </Button>

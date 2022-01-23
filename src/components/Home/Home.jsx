@@ -1,14 +1,14 @@
 import React from 'react'
-import { SplashCover, BuyerPoints, NewsletterSignUp, SellerPoints, ProductCollections } from './Subcomponents/'
+import { SplashCover, SellingPoints, NewsletterSignUp, ProductCollections } from './Subcomponents/'
 
 const Home = () => {
 
     return (
         <>
             <SplashCover />
-            <BuyerPoints />
+            <SellingPoints isBuyer={true} />
             <NewsletterSignUp />
-            <SellerPoints />
+            <SellingPoints isBuyer={false} />
             <ProductCollections />
         </>
  

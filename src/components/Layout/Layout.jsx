@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react'
 import { Outlet, useLocation } from 'react-router-dom'
 import Navbar from './Navbar/Navbar'
-import Footer from './Footer';
-import PreNavText from './Other/PreNavText';
+import Footer from './Footer/Footer';
+import PreNavText from './PreNavText';
 
 const Layout = () => {
 

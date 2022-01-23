@@ -12,7 +12,7 @@ const categories = [
 
 const ProductCollections = () => {
     return (
-        <div>
+        <div style={{backgroundColor: 'lightgray', padding: '1rem 0 1rem 0'}}>
             <Typography gutterBottom variant='h6' align='center' style={{marginTop: '4rem'}}>Product Collections</Typography>
             <Divider variant='middle' style={{width: '40%', margin: 'auto'}} />
             <Grid container style={{justifyContent: 'center', alignItems: 'center', marginTop: '2rem', marginBottom: '4rem'}}>
