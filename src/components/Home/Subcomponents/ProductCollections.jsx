@@ -1,7 +1,14 @@
 import React from 'react';
+import CollectionImage from './CollectionImage';
 import { Grid, Typography, Divider } from '@material-ui/core';
+import { JamesJean, KaiMartin, LexieBaker, GaryBorse } from '../../../assets/collections'
 
-const categories = ['1','2','3','4'];
+const categories = [
+    {image: JamesJean, name: 'James Jean Collection'},
+    {image: KaiMartin, name: 'Kai Martin Collection'},
+    {image: LexieBaker, name: 'Psychedelicious Lex Collection'},
+    {image: GaryBorse, name: 'Gary Borse Collection'}
+];
 
 const ProductCollections = () => {
     return (
@@ -11,8 +18,9 @@ const ProductCollections = () => {
             <Grid container style={{justifyContent: 'center', alignItems: 'center', marginTop: '2rem', marginBottom: '4rem'}}>
                 {categories.map((category) => (
                     <Grid item xs={12} md={6} style={{textAlign: 'center'}}>
-                        <img src='http://via.placeholder.com/350x150' alt={category} />
-                        <p>Product {category}</p>
+                        <CollectionImage image={category.image} name={category.name} />
+                        {/* <img src='http://via.placeholder.com/350x150' alt={category} />
+                        <p>{category.name}</p> */}
                     </Grid>
                 ))}
             </Grid>   

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { Typography, Grid, TextField, Button } from '@mui/material';
 import { useForm } from 'react-hook-form';
-// import { addSubscriber, subscriberCount } from '../lib/email.js';
+import { addSubscriber, subscriberCount } from '../../../lib/email.js';
 
-const EmailOnlySubscribeForm = () => {
+const NewsletterSignUp = () => {
 
     const { register, handleSubmit } = useForm();
     const onError = (errors, e) => console.log(errors, e);
@@ -12,7 +12,7 @@ const EmailOnlySubscribeForm = () => {
 
     const onSubmit = async (data, e) => {
         console.log(data);
-        // setIsRegistered(await addSubscriber(data));
+        setIsRegistered(await addSubscriber(data));
     }
 
     // useEffect( async() => {
@@ -22,7 +22,7 @@ const EmailOnlySubscribeForm = () => {
 
     return (
     <div style={{backgroundColor: 'darkgray', padding: '2rem', height: '250px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-        <div style={{textAlign: 'center'}}>
+        <div style={{textAlign: 'center', width: '100%'}}>
             <Typography variant="h6" align="center">Newsletter</Typography>
             <Typography gutterBottom variant="body2" align="center">--</Typography>
             <Typography gutterBottom variant="body1" align="center" style={{fontSize: '0.75rem', paddingBottom: '2rem'}}>Join to get special offers, free giveaways, and once-in-a-lifetime deals.</Typography>
@@ -38,7 +38,7 @@ const EmailOnlySubscribeForm = () => {
     )
 }
 
-export default EmailOnlySubscribeForm
+export default NewsletterSignUp
 
 
 

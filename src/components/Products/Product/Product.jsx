@@ -19,7 +19,7 @@ function getModalStyle() {
 }
 
 const Product = ({product, onAddToCart}) => {
-    console.log(product);
+    // console.log(product);
 
     let picURLs = product.assets.map((asset, index) => {
         return asset.url;
@@ -40,7 +40,7 @@ const Product = ({product, onAddToCart}) => {
     };
 
     const changeActivePic = (event) => {
-        console.log(event);
+        // console.log(event);
         const currentPic = activePic;
         const newActivePic = event.target.currentSrc
         setActivePic(newActivePic);
@@ -48,8 +48,8 @@ const Product = ({product, onAddToCart}) => {
     }
 
     const changeInactivePics = (currentPic, newActivePic) => {
-        console.log('InactivePics', inactivePics);
-        console.log('New pic', newActivePic);
+        // console.log('InactivePics', inactivePics);
+        // console.log('New pic', newActivePic);
         const updatedInactivePics = inactivePics.map(picURL => {
             console.log(picURL);
             if(picURL === newActivePic){
@@ -58,7 +58,7 @@ const Product = ({product, onAddToCart}) => {
                 return picURL
             }
         })
-        console.log('Updated: ', updatedInactivePics)
+        // console.log('Updated: ', updatedInactivePics)
         setInactivePics(updatedInactivePics);
     };
 
