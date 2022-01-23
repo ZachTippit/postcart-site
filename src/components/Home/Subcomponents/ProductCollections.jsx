@@ -4,10 +4,10 @@ import { Grid, Typography, Divider } from '@material-ui/core';
 import { JamesJean, KaiMartin, LexieBaker, GaryBorse } from '../../../assets/collections'
 
 const categories = [
-    {image: JamesJean, name: 'James Jean Collection'},
-    {image: KaiMartin, name: 'Kai Martin Collection'},
-    {image: LexieBaker, name: 'Psychedelicious Lex Collection'},
-    {image: GaryBorse, name: 'Gary Borse Collection'}
+    {image: JamesJean, name: 'James Jean'},
+    {image: KaiMartin, name: 'Kai Martin'},
+    {image: LexieBaker, name: 'Psychedelicious Lex'},
+    {image: GaryBorse, name: 'Gary Borse'}
 ];
 
 const ProductCollections = () => {
